@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import OutcomeItem from './OutcomeItem';
+import './OutcomeList.css';
 
 export class OutcomeList extends Component {
 	render() {
@@ -22,9 +23,13 @@ export class OutcomeList extends Component {
 		});
 		return (
 			<div className="container">
-				<div className="row">
-					<div className="col-1">ID</div>
-					<div className="col-11">Learning outcomes</div>
+				<div className="outcome-header bg-dark text-white row">
+					<div className="col-1">
+						<h5>ID</h5>
+					</div>
+					<div className="col-11">
+						<h5>Learning outcomes</h5>
+					</div>
 				</div>
 				{renderedList}
 			</div>
