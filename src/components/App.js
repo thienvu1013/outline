@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Outcomes from './Outcomes';
+import HomePage from './HomePage';
+import Search from './Search';
 
 export class App extends Component {
 	state = {
@@ -13,6 +15,7 @@ export class App extends Component {
 			'Use different design and development utilities and tools.',
 		],
 		selected: '',
+		step: 0,
 	};
 
 	//handle outcome change
@@ -47,18 +50,38 @@ export class App extends Component {
 		this.setState({ selected: e.target.value });
 	};
 
+	startSearch = () => {
+		this.setState({ step: 2 });
+	};
+
+	startCreate = () => {
+		this.setState({ step: 1 });
+	};
+
+	navigationSwitch = () => {
+		switch (this.state.step) {
+			case 0:
+				return <HomePage search={this.startSearch} create={this.startCreate} />;
+			case 1:
+				return (
+					<Outcomes
+						outcomes={this.state.outcomeList}
+						handleChange={this.handleOutcomeChange}
+						handleDelete={this.handleOutcomeDelete}
+						handleEdit={this.handleOutcomeEdit}
+						createSelect={this.createSelect}
+						editSelect={this.editSelect}
+						selected={this.state.selected}
+					/>
+				);
+			case 2:
+				return <Search />;
+		}
+	};
+
 	render() {
-		return (
-			<Outcomes
-				outcomes={this.state.outcomeList}
-				handleChange={this.handleOutcomeChange}
-				handleDelete={this.handleOutcomeDelete}
-				handleEdit={this.handleOutcomeEdit}
-				createSelect={this.createSelect}
-				editSelect={this.editSelect}
-				selected={this.state.selected}
-			/>
-		);
+		console.log(this.state.outcomeList);
+		return this.navigationSwitch();
 	}
 }
 

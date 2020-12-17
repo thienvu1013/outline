@@ -8,7 +8,7 @@ export class Outcomes extends Component {
 	render() {
 		return (
 			<div className="container">
-				<div className=" cont bg-dark text-white">
+				<div className=" cont bg-info text-white">
 					<h3>Learning Outcomes</h3>
 				</div>
 				<OutcomeForm

@@ -57,7 +57,7 @@ export class OutcomeItem extends Component {
 		) : (
 			<button
 				onClick={this.saveChange}
-				className="btn btn-outline-secondary"
+				className="btn btn-info"
 				type="button"
 				id="button-addon2"
 			>
@@ -66,13 +66,18 @@ export class OutcomeItem extends Component {
 					width="16"
 					height="16"
 					fill="currentColor"
-					className="bi bi-check-square-fill"
+					className="bi bi-emoji-smile"
 					viewBox="0 0 16 16"
 				>
 					<path
 						fillRule="evenodd"
-						d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.03 4.97a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"
+						d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
 					/>
+					<path
+						fillRule="evenodd"
+						d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683z"
+					/>
+					<path d="M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z" />
 				</svg>
 			</button>
 		);
@@ -110,7 +115,7 @@ export class OutcomeItem extends Component {
 						></textarea>
 					</div>
 				</div>
-				<div className="col=2">
+				<div className="col=2 btn-group">
 					{this.buttonSwitch()}
 					<button
 						className="btn btn-outline-secondary"

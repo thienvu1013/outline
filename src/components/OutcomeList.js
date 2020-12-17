@@ -23,7 +23,7 @@ export class OutcomeList extends Component {
 		});
 		return (
 			<div className="container">
-				<div className="outcome-header bg-dark text-white row">
+				<div className="outcome-header bg-info text-white row">
 					<div className="col-1">
 						<h5>ID</h5>
 					</div>
